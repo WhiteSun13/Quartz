@@ -1,0 +1,10 @@
+Linux
+Kubernetes
+Docker
+DevOps
+Ansible
+CI/CD
+Bash
+PostgreSQL
+Python
+Grafana
