@@ -1,0 +1,11 @@
+formulas:
+  Без названия: ""
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("Лекции")
+    order:
+      - file.name
+      - file.folder
