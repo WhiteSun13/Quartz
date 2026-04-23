@@ -753,13 +753,15 @@ inet dhcp server start
 
 ```bash
 # Создаём IP-объект
-firewall ip-object add @N2 10.20.0.2-10.20.0.10
+firewall ip-object add name @n2 10.20.0.2-10.20.0.10
 
 # Разрешаем локальный трафик
-firewall local add 1 rule N2 source @N2 dst 10.20.0.1 pass
+firewall local add 1 rule "local" source @n2 dst 10.20.0.1 pass
+или
+firewall local add 1 rule "local" source @n2 dst 10.20.0.1 icmp pass
 
 # Разрешаем транзитный трафик
-firewall forward add 1 rule transit source @any dst @any pass
+firewall forward add 1 rule "transit" source @any dst @any pass
 ```
 
 ### Проблема: координаторы не знают сети друг друга
